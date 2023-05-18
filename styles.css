@@ -128,7 +128,7 @@ body {
     rgb(11, 51, 82),
     rgb(15, 24, 44)
   );
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 1rem;
   text-decoration: none;
 }
 
@@ -156,18 +156,19 @@ body {
   height: 78px;
   margin-top: 48.39px;
   background-color: #121d33;
-  border-bottom: 0.1px solid #fff;
+  border-bottom: 0.1px solid #4a4a4a;
 }
 
 .background__image {
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: cover;
 }
 
 .background__container {
   width: 100%;
-  height: 100%;
+  height: 70vh;
   position: relative;
   z-index: -1;
 }
@@ -275,6 +276,30 @@ body {
   cursor: pointer;
 }
 
+.mid__container {
+  position: absolute;
+  top: 300px;
+  color: #fff;
+}
+
+.mid__heading {
+  font-size: 2.9rem;
+  font-weight: 700;
+}
+
+.mid__text {
+  font-size: 1.55rem;
+}
+
+.mid-signUp__container {
+  display: flex;
+}
+
+.mid__email-input {
+  max-width: max-content;
+  padding: 15px 10px;
+}
+
 @media screen and (min-width: 1022px) {
   .header-burger {
     display: none;
@@ -284,6 +309,9 @@ body {
 @media screen and (max-width: 620px) {
   .header-right__items {
     display: none;
+  }
+  .top__link {
+    font-size: 14px;
   }
 }
 
