@@ -1,0 +1,239 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.top-link__container {
+  background-color: blueviolet;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: interFont-rg;
+  src: url("./fonts/static/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: interFont-bd;
+  src: url("./fonts/static/Inter-Bold.ttf");
+}
+
+@font-face {
+  font-family: interFont-bdX;
+  src: url("./fonts/static/Inter-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: interFont-lt;
+  src: url("./fonts/static/Inter-Light.ttf");
+}
+
+body {
+  font-family: interFont-rg, sans-serif;
+}
+
+.top__link {
+  display: flex;
+  position: fixed;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+  font-family: interFont-rg, sans-serif;
+  background-image: linear-gradient(
+    to right,
+    rgb(15, 24, 44),
+    rgb(11, 51, 82),
+    rgb(18, 103, 175),
+    rgb(23, 89, 218),
+    rgb(18, 103, 175),
+    rgb(11, 51, 82),
+    rgb(15, 24, 44)
+  );
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+}
+
+.top__link:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(15, 24, 44),
+    rgb(11, 51, 82),
+    rgb(41, 62, 108),
+    rgb(49, 77, 137),
+    rgb(37, 58, 103),
+    rgb(11, 51, 82),
+    rgb(15, 24, 44)
+  );
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 78px;
+  padding: 0px 16px;
+  margin-top: 48.39px;
+  background-color: #121d33;
+  border-bottom: 1px solid #fff;
+}
+
+.logo__container {
+  height: 24px;
+}
+
+.logo__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.header-right__items {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1.35rem;
+}
+
+.header-right__items button {
+  border-radius: 0.5rem;
+  font-size: 14px;
+}
+
+.header-right__items button:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+.header-LogIn__btn {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+  padding: 0.6rem 16px;
+}
+
+.header-signUp__btn {
+  border-color: transparent;
+  background-color: #fff;
+  padding: 0.6rem 16px;
+}
+
+.header-search__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 5rem;
+}
+
+.header-search__logo:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.header-burger {
+  flex-shrink: 0;
+  width: 20px;
+  height: 15px;
+  color: #fff;
+}
+
+.header-burger:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1022px) {
+  .header-burger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header-right__items {
+    display: none;
+  }
+}
