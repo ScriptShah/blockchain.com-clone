@@ -107,6 +107,8 @@ body {
   font-family: interFont-rg, sans-serif;
 }
 
+
+
 .top__link {
   display: flex;
   position: fixed;
@@ -141,9 +143,12 @@ body {
       rgb(15, 24, 44));
 }
 
+
+
 .header {
   display: flex;
   position: fixed;
+  z-index: 5;
   -webkit-box-pack: center;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -346,6 +351,40 @@ body {
   cursor: pointer;
 }
 
+
+
+
+.crypto__container {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+}
+
+
+.crypto {
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+  border-radius: 0.5rem;
+  box-shadow: rgba(103, 113, 133, 0.2) 0.75rem 1.5rem 4rem 0rem;
+  color: rgb(18, 29, 51);
+  min-width: 0px;
+  padding: 1.25rem;
+  transition: background-image 0.6s ease 0s;
+  flex-shrink: 0;
+
+}
+
+
+.crypto__icon,
+.crypto__details,
+.crypto__price {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+}
+
+
+
+
 @media screen and (min-width: 1022px) {
   .header-burger {
     display: none;
@@ -369,7 +408,7 @@ body {
 @media screen and (min-width: 786px) {
   .top__link {
     font-size: 16px;
-    padding: 0.7rem 1rem;
+    padding: 0.74rem 1rem;
   }
 
   .mid__heading {
