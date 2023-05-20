@@ -30,6 +30,7 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /*
@@ -107,8 +108,6 @@ body {
   font-family: interFont-rg, sans-serif;
 }
 
-
-
 .top__link {
   display: flex;
   position: fixed;
@@ -120,30 +119,32 @@ body {
   color: #fff;
   font-size: 1rem;
   font-family: interFont-rg, sans-serif;
-  background-image: linear-gradient(to right,
-      rgb(15, 24, 44),
-      rgb(11, 51, 82),
-      rgb(18, 103, 175),
-      rgb(23, 89, 218),
-      rgb(18, 103, 175),
-      rgb(11, 51, 82),
-      rgb(15, 24, 44));
+  background-image: linear-gradient(
+    to right,
+    rgb(15, 24, 44),
+    rgb(11, 51, 82),
+    rgb(18, 103, 175),
+    rgb(23, 89, 218),
+    rgb(18, 103, 175),
+    rgb(11, 51, 82),
+    rgb(15, 24, 44)
+  );
   padding: 0.6rem 1rem;
   text-decoration: none;
 }
 
 .top__link:hover {
-  background-image: linear-gradient(to right,
-      rgb(15, 24, 44),
-      rgb(11, 51, 82),
-      rgb(41, 62, 108),
-      rgb(49, 77, 137),
-      rgb(37, 58, 103),
-      rgb(11, 51, 82),
-      rgb(15, 24, 44));
+  background-image: linear-gradient(
+    to right,
+    rgb(15, 24, 44),
+    rgb(11, 51, 82),
+    rgb(41, 62, 108),
+    rgb(49, 77, 137),
+    rgb(37, 58, 103),
+    rgb(11, 51, 82),
+    rgb(15, 24, 44)
+  );
 }
-
-
 
 .header {
   display: flex;
@@ -165,12 +166,15 @@ body {
   height: 100%;
   display: block;
   object-fit: cover;
+  position: absolute;
+  z-index: -1;
 }
 
 .background__container {
   width: 100%;
-  height: 58vh;
-  position: relative;
+  height: 68vh;
+  position: absolute;
+  z-index: -1;
   z-index: -1;
 }
 
@@ -281,15 +285,11 @@ body {
   width: 100%;
   height: 40vh;
   position: absolute;
-  top: 150px;
+  top: 180px;
   color: #fff;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-
-
-
-
 }
 
 .mid {
@@ -304,7 +304,6 @@ body {
 .mid__heading {
   font-size: 1.4rem;
   font-weight: 700;
-
 }
 
 .mid__text {
@@ -333,8 +332,6 @@ body {
   position: absolute;
   top: 10px;
   left: 15px;
-
-
 }
 
 .signUp__btn {
@@ -351,28 +348,36 @@ body {
   cursor: pointer;
 }
 
-
-
-
-.crypto__container {
-  display: flex;
-  flex-flow: row nowrap;
+.cryptocurrencies {
+  position: absolute;
+  top: 28.5rem;
   overflow-x: scroll;
 }
 
+.crypto__container {
+  display: flex;
+  align-items: center;
+  z-index: 6;
+  flex-flow: row nowrap;
+  width: 510px;
+  background-color: transparent;
+  gap: 0.6rem;
+  padding-bottom: 4.4rem;
+  padding-right: 4rem;
+}
 
 .crypto {
+  position: relative;
+  margin-left: 18px;
   background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
   border-radius: 0.5rem;
   box-shadow: rgba(103, 113, 133, 0.2) 0.75rem 1.5rem 4rem 0rem;
   color: rgb(18, 29, 51);
   min-width: 0px;
-  padding: 1.25rem;
+  padding: 1.8rem 2.8rem;
   transition: background-image 0.6s ease 0s;
   flex-shrink: 0;
-
 }
-
 
 .crypto__icon,
 .crypto__details,
@@ -381,9 +386,6 @@ body {
   flex-flow: row nowrap;
   gap: 10px;
 }
-
-
-
 
 @media screen and (min-width: 1022px) {
   .header-burger {
@@ -399,11 +401,7 @@ body {
   .top__link {
     font-size: 14px;
   }
-
-
 }
-
-
 
 @media screen and (min-width: 786px) {
   .top__link {
@@ -420,8 +418,6 @@ body {
   .mid__container {
     height: 90vh;
   }
-
-
 
   .mid__text {
     font-size: 1.6rem;
@@ -446,13 +442,8 @@ body {
     position: absolute;
     top: 13px;
     left: 15px;
-
-
   }
 }
-
-
-
 
 @media screen and (max-width: 1024px) {
   .header-mid__items {
