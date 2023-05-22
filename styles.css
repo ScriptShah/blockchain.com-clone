@@ -173,7 +173,7 @@ body {
 
 .background__container {
   width: 100%;
-  height: 77vh;
+  height: 66vh;
   position: absolute;
   z-index: -1;
   z-index: -1;
@@ -502,11 +502,20 @@ body {
 
 .space {
   width: 100vw;
-  height: 107vh;
+  height: 92vh;
   background-color: transparent;
 }
 
 .mid__section {
+  margin-top: 4rem;
+}
+
+.services__container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: auto;
+  gap: 4rem;
   margin-top: 4rem;
 }
 
@@ -517,16 +526,27 @@ body {
   color: #8749f2;
   background-color: #f7f5fe;
   border-radius: 1rem;
-  margin: 15px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 15px;
 }
 
 .service.one {
   background-image: url("./images/homepage-app-shapes-bg.png");
   background-repeat: no-repeat;
-  background-size: 80% 50%;
+  background-size: 85% 40%;
+  background-position: 100% 30%;
+  width: 93%;
+  height: auto;
+  background-origin: padding-box;
+}
 
-  width: 100%;
+.service.two {
+  background-image: url("./images/homepage-app-shapes-bg.png");
+  background-repeat: no-repeat;
+  background-size: 85% 40%;
+  background-position: 100% 30%;
+  width: 93%;
   height: auto;
   background-origin: padding-box;
 }
@@ -609,11 +629,18 @@ body {
 }
 
 .get__started {
+  margin-top: -2rem;
   color: #fff;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 11px 16px;
   background-color: #7729ff;
   width: fit-content;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.get__started:hover {
+  background-color: #5d00ff;
 }
 
 @media screen and (min-width: 1022px) {
@@ -633,6 +660,11 @@ body {
 }
 
 @media screen and (min-width: 786px) {
+  .space {
+    width: 100vw;
+    height: 125vh;
+    background-color: transparent;
+  }
   .top__link {
     font-size: 16px;
     padding: 0.74rem 1rem;
