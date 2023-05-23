@@ -180,6 +180,7 @@ body {
 }
 
 .logo__container {
+  width: fit-content;
   height: 24px;
   min-height: 10px;
 }
