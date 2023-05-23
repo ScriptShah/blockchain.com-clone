@@ -534,8 +534,8 @@ body {
 .service.one {
   background-image: url("./images/homepage-app-shapes-bg.png");
   background-repeat: no-repeat;
-  background-size: 85% 40%;
-  background-position: 100% 30%;
+  background-size: 93% 40%;
+  background-position: 100% 37%;
   width: 93%;
   height: auto;
   background-origin: padding-box;
@@ -567,11 +567,13 @@ body {
 }
 
 .service__image {
-  width: 50%;
-  height: 100%;
+  width: 230px;
+  height: 330px;
   display: block;
   object-fit: cover;
-  margin: auto;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .announcement {
@@ -629,7 +631,7 @@ body {
 }
 
 .get__started {
-  margin-top: -2rem;
+  margin-top: 1rem;
   color: #fff;
   text-decoration: none;
   padding: 11px 16px;
@@ -641,6 +643,10 @@ body {
 
 .get__started:hover {
   background-color: #5d00ff;
+}
+
+.feature__container {
+  display: none;
 }
 
 @media screen and (min-width: 1022px) {
@@ -725,6 +731,64 @@ body {
     top: 13px;
     left: 15px;
   }
+
+  .service__image {
+    display: none;
+  }
+
+  .announcement {
+    font-size: 2.5rem;
+    width: 60%;
+  }
+
+  .controller {
+    display: none;
+  }
+
+  .feature {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #efecfe;
+    width: 440px;
+    height: 120px;
+    padding: 10px 0px;
+    padding-left: 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: 1px solid #c9c6d5;
+  }
+
+  .feature__title {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .feature__container {
+    display: block;
+  }
+
+  .feature__container h3 {
+    background-color: #f7f5ff;
+    width: 440px;
+    height: 60px;
+    padding: 10px 0px;
+    padding-left: 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: 1px solid #e7e5ee;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .service.one {
+    background-image: url("./images/homepage-app-shapes-bg.png");
+    background-position: 100% 80%;
+    background-size: 50% 50%;
+    width: 93%;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -735,5 +799,21 @@ body {
   .header {
     justify-content: space-between;
     padding: 0px 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .service {
+    padding: 90px 110px;
+  }
+
+  .service.one {
+    width: 85%;
+  }
+
+  .get__started {
+    margin-top: 5rem;
+    padding: 13px 22px;
+    font-size: 18px;
   }
 }
