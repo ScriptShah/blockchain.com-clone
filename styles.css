@@ -106,6 +106,7 @@ h6 {
 
 body {
   font-family: interFont-rg, sans-serif;
+  user-select: none;
 }
 
 .top__link {
@@ -281,6 +282,39 @@ body {
 }
 
 .header-burger:hover {
+  cursor: pointer;
+}
+
+.header-mid__items span:hover + .triangle + .rectangle {
+  display: block;
+}
+
+.triangle {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  right: 35.4rem;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid #ffffff;
+}
+
+.rectangle {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  width: 560px;
+  height: 556px;
+  top: 4.9rem;
+  right: 19rem;
+  border-radius: 10px;
+  border: 1 px solid;
+  border-color: transparent transparent rgb(255, 255, 255);
+}
+
+.rectangle:hover {
   cursor: pointer;
 }
 
@@ -818,5 +852,9 @@ body {
     margin-top: 5rem;
     padding: 13px 22px;
     font-size: 18px;
+  }
+
+  ::-webkit-input-placeholder {
+    top: 18px;
   }
 }
