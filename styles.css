@@ -289,35 +289,6 @@ body {
   display: block;
 }
 
-.triangle {
-  display: none;
-  position: absolute;
-  top: 4rem;
-  right: 35.4rem;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 15px solid #ffffff;
-}
-
-.rectangle {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  width: 560px;
-  height: 556px;
-  top: 4.9rem;
-  right: 19rem;
-  border-radius: 10px;
-  border: 1 px solid;
-  border-color: transparent transparent rgb(255, 255, 255);
-}
-
-.rectangle:hover {
-  cursor: pointer;
-}
-
 .mid__container {
   width: 100%;
   height: 40vh;
@@ -488,7 +459,7 @@ body {
 
 .crypto__shopping {
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -504,15 +475,30 @@ body {
 .shopping__txt {
   display: none;
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
+  padding-right: 10px;
+}
+
+.crypto__shopping-icon {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.crypto__shopping-image {
+  width: 60px;
+  height: 50px;
+  border-radius: 50px;
 }
 
 .crypto__shopping:hover {
-  width: 170px;
+  width: 190px;
   .shopping__txt {
     display: block;
   }
+  cursor: pointer;
 }
 
 .more__prices {
@@ -579,13 +565,15 @@ body {
 }
 
 .service.two {
-  background-image: url("./images/homepage-app-shapes-bg.png");
+  background-image: url("./images/homepage-exchange-shapes-bg@2x.png");
   background-repeat: no-repeat;
-  background-size: 85% 40%;
-  background-position: 100% 30%;
+  background-size: 90% 50%;
+  background-position: 10% 30%;
   width: 93%;
   height: auto;
   background-origin: padding-box;
+  background-color: #f5fafe;
+  color: #0c6cf2;
 }
 
 .title-icon {
@@ -603,9 +591,15 @@ body {
   font-size: 18px;
 }
 
+.title-icon.two {
+  color: #0c6cf2;
+  font-size: 1.3rem;
+  width: 180px;
+}
+
 .service__image {
-  width: 230px;
-  height: 330px;
+  width: auto;
+  height: 400px;
   display: block;
   object-fit: cover;
   margin-top: 40px;
@@ -617,10 +611,15 @@ body {
   font-size: 1.2rem;
 }
 
+.announcement.two {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
 .controller__container {
-  padding-top: 2rem;
+  padding-top: 1rem;
   width: 100%;
-  height: 20xp;
+  height: 50px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -630,6 +629,10 @@ body {
 .arrows {
   display: flex;
   gap: 1rem;
+}
+
+.arrows.two {
+  gap: 0.7rem;
 }
 
 .belt__container {
@@ -645,6 +648,12 @@ body {
   border-radius: 6px;
 }
 
+.arrows.two > .arrow__lift,
+.arrow__right {
+  padding: 12px 12px;
+  border-color: #0c6cf2;
+}
+
 .arrow__lift,
 .arrow__right:hover {
   cursor: pointer;
@@ -656,6 +665,14 @@ body {
   width: 20px;
   background-color: #d6d3e2;
   border-radius: 5px;
+}
+
+.belt__container.two > .thread {
+  background-color: #c7def0;
+}
+
+.belt__container.two > .thread.one {
+  background-color: #0c6cf2;
 }
 
 .thread:hover {
