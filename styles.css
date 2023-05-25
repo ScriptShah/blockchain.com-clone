@@ -576,6 +576,17 @@ body {
   color: #0c6cf2;
 }
 
+.service.three {
+  color: #222222;
+  background-image: url("./images/homepage-institutional-shapes-bg.png");
+  background-repeat: no-repeat;
+  background-size: 90% 150%;
+  background-position: 30% -100%;
+  width: 95%;
+  font-size: 1.1rem;
+  background-color: #f0f2f7;
+}
+
 .title-icon {
   margin-left: 10px;
   display: flex;
@@ -595,6 +606,19 @@ body {
   color: #0c6cf2;
   font-size: 1.3rem;
   width: 180px;
+}
+
+.title-icon.three {
+  background-color: #dfe3eb;
+}
+
+.title.three {
+  color: #677188;
+}
+
+.announcement.three {
+  font-size: 1.2rem;
+  padding: 10px 0px;
 }
 
 .service__image {
@@ -699,8 +723,40 @@ body {
   background-color: #5d00ff;
 }
 
+.Be_client {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  background-color: #677188;
+  width: fit-content;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.Be_client:hover {
+  background-color: #565f74;
+}
+
 .feature__container {
   display: none;
+}
+
+.feature__description.two {
+  padding-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.Trade.Now {
+  text-decoration: none;
+  color: #fff;
+  background-color: #0c6cf2;
+  width: fit-content;
+  padding: 11px 15px;
+  border-radius: 10px;
+}
+
+.Trade.Now:hover {
+  background-color: #0033ff;
 }
 
 @media screen and (min-width: 1022px) {
