@@ -20,6 +20,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 /*
@@ -104,6 +105,10 @@ h6 {
   src: url("./fonts/static/Inter-Light.ttf");
 }
 
+* {
+  max-width: 100%;
+}
+
 body {
   font-family: interFont-rg, sans-serif;
   user-select: none;
@@ -121,27 +126,31 @@ body {
   color: #fff;
   font-size: 1rem;
   font-family: interFont-rg, sans-serif;
-  background-image: linear-gradient(to right,
-      rgb(15, 24, 44),
-      rgb(11, 51, 82),
-      rgb(18, 103, 175),
-      rgb(23, 89, 218),
-      rgb(18, 103, 175),
-      rgb(11, 51, 82),
-      rgb(15, 24, 44));
+  background-image: linear-gradient(
+    to right,
+    rgb(15, 24, 44),
+    rgb(11, 51, 82),
+    rgb(18, 103, 175),
+    rgb(23, 89, 218),
+    rgb(18, 103, 175),
+    rgb(11, 51, 82),
+    rgb(15, 24, 44)
+  );
   padding: 0.6rem 1rem;
   text-decoration: none;
 }
 
 .top__link:hover {
-  background-image: linear-gradient(to right,
-      rgb(15, 24, 44),
-      rgb(11, 51, 82),
-      rgb(41, 62, 108),
-      rgb(49, 77, 137),
-      rgb(37, 58, 103),
-      rgb(11, 51, 82),
-      rgb(15, 24, 44));
+  background-image: linear-gradient(
+    to right,
+    rgb(15, 24, 44),
+    rgb(11, 51, 82),
+    rgb(41, 62, 108),
+    rgb(49, 77, 137),
+    rgb(37, 58, 103),
+    rgb(11, 51, 82),
+    rgb(15, 24, 44)
+  );
 }
 
 .header {
@@ -281,7 +290,7 @@ body {
   cursor: pointer;
 }
 
-.header-mid__items span:hover+.triangle+.rectangle {
+.header-mid__items span:hover + .triangle + .rectangle {
   display: block;
 }
 
@@ -405,9 +414,11 @@ body {
 }
 
 .crypto:hover {
-  background-image: linear-gradient(rgb(255, 255, 255),
-      rgb(255, 255, 255),
-      rgb(239, 247, 245));
+  background-image: linear-gradient(
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgb(239, 247, 245)
+  );
   cursor: pointer;
 }
 
@@ -589,8 +600,8 @@ body {
   color: #f28b24;
   background-image: url("./images/homepage-explorer-shapes-bg.png");
   background-repeat: no-repeat;
-  background-size: 60% 50%;
-  background-position: 90% 50%;
+  background-size: 70% 50%;
+  background-position: 100% 30%;
 }
 
 .title-icon {
@@ -652,6 +663,7 @@ body {
 
 .announcement.four {
   color: #f28b24;
+  padding-bottom: 20px;
 }
 
 .controller__container {
@@ -662,6 +674,10 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.controller__container.four {
+  margin-top: 5rem;
 }
 
 .arrows {
@@ -691,19 +707,25 @@ body {
   border-radius: 6px;
 }
 
-.arrows.two>.arrow__lift,
-.arrow__right {
-  border-color: #0c6cf2;
-}
-
 .arrow__lift,
 .arrow__right:hover {
   cursor: pointer;
   border: 1px solid #7729ff;
 }
 
-.arrows.four>.arrow__lift,
-.arrow__right {
+.arrows.two > .arrow__lift {
+  border-color: #0c6cf2;
+}
+
+.arrows.two > .arrow__right {
+  border-color: #0c6cf2;
+}
+
+.arrows.four > .arrow__lift {
+  border-color: #f28b24;
+}
+
+.arrows.four > .arrow__right {
   border-color: #f28b24;
 }
 
@@ -714,11 +736,11 @@ body {
   border-radius: 5px;
 }
 
-.belt__container.two>.thread {
+.belt__container.two > .thread {
   background-color: #c7def0;
 }
 
-.belt__container.two>.thread.one {
+.belt__container.two > .thread.one {
   background-color: #0c6cf2;
 }
 
@@ -782,26 +804,64 @@ body {
   background-color: #0033ff;
 }
 
-
 .title-icon.four {
   width: 145px;
 }
 
-
-.exlore {
+.explore {
   text-decoration: none;
   font-size: 14px;
   color: #fff;
-  background-color: #EC8A23;
+  background-color: #ec8a23;
   width: fit-content;
   padding: 11px 15px;
   border-radius: 10px;
 }
 
-.exlore:hover {
-  background-color: #D96724;
+.explore:hover {
+  background-color: #d96724;
 }
 
+.explore-top {
+  display: block;
+  width: 100%;
+  height: 5px;
+}
+
+.banner {
+  color: #fff;
+  margin-top: 4.5rem;
+  width: 100%;
+  height: 160px;
+  background-color: #121d33;
+  background-image: url(./images/banner-bg.svg);
+  padding: 40px 20px;
+}
+
+.banner__container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.banner__heading {
+  font-size: 1.2rem;
+}
+
+.banner__link {
+  font-size: 15px;
+  color: #0c6cf2;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.banner__link:hover {
+  background-color: #ffffffea;
+}
 
 @media screen and (min-width: 1022px) {
   .header-burger {
@@ -943,6 +1003,21 @@ body {
     background-size: 50% 50%;
     width: 93%;
     height: auto;
+  }
+
+  .banner__link {
+    padding: 12px 30px;
+    font-size: 18px;
+  }
+
+  .banner__container {
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 30px;
+  }
+
+  .banner__heading {
+    font-size: 2.5rem;
   }
 }
 
