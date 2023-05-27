@@ -121,31 +121,27 @@ body {
   color: #fff;
   font-size: 1rem;
   font-family: interFont-rg, sans-serif;
-  background-image: linear-gradient(
-    to right,
-    rgb(15, 24, 44),
-    rgb(11, 51, 82),
-    rgb(18, 103, 175),
-    rgb(23, 89, 218),
-    rgb(18, 103, 175),
-    rgb(11, 51, 82),
-    rgb(15, 24, 44)
-  );
+  background-image: linear-gradient(to right,
+      rgb(15, 24, 44),
+      rgb(11, 51, 82),
+      rgb(18, 103, 175),
+      rgb(23, 89, 218),
+      rgb(18, 103, 175),
+      rgb(11, 51, 82),
+      rgb(15, 24, 44));
   padding: 0.6rem 1rem;
   text-decoration: none;
 }
 
 .top__link:hover {
-  background-image: linear-gradient(
-    to right,
-    rgb(15, 24, 44),
-    rgb(11, 51, 82),
-    rgb(41, 62, 108),
-    rgb(49, 77, 137),
-    rgb(37, 58, 103),
-    rgb(11, 51, 82),
-    rgb(15, 24, 44)
-  );
+  background-image: linear-gradient(to right,
+      rgb(15, 24, 44),
+      rgb(11, 51, 82),
+      rgb(41, 62, 108),
+      rgb(49, 77, 137),
+      rgb(37, 58, 103),
+      rgb(11, 51, 82),
+      rgb(15, 24, 44));
 }
 
 .header {
@@ -285,7 +281,7 @@ body {
   cursor: pointer;
 }
 
-.header-mid__items span:hover + .triangle + .rectangle {
+.header-mid__items span:hover+.triangle+.rectangle {
   display: block;
 }
 
@@ -323,7 +319,7 @@ body {
 .mid-signUp__container {
   margin-top: 13px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   gap: 1rem;
 }
 
@@ -349,6 +345,7 @@ body {
   color: rgb(12, 108, 242);
   border-radius: 10px;
   border-color: transparent;
+  flex-shrink: 0;
 }
 
 .signUp__btn:hover {
@@ -408,11 +405,9 @@ body {
 }
 
 .crypto:hover {
-  background-image: linear-gradient(
-    rgb(255, 255, 255),
-    rgb(255, 255, 255),
-    rgb(239, 247, 245)
-  );
+  background-image: linear-gradient(rgb(255, 255, 255),
+      rgb(255, 255, 255),
+      rgb(239, 247, 245));
   cursor: pointer;
 }
 
@@ -495,9 +490,11 @@ body {
 
 .crypto__shopping:hover {
   width: 190px;
+
   .shopping__txt {
     display: block;
   }
+
   cursor: pointer;
 }
 
@@ -510,6 +507,7 @@ body {
   text-decoration: none;
   float: right;
   font-size: 14px;
+  padding-top: 0.5rem;
 }
 
 .more__prices:hover {
@@ -587,6 +585,14 @@ body {
   background-color: #f0f2f7;
 }
 
+.service.four {
+  color: #f28b24;
+  background-image: url("./images/homepage-explorer-shapes-bg.png");
+  background-repeat: no-repeat;
+  background-size: 60% 50%;
+  background-position: 90% 50%;
+}
+
 .title-icon {
   margin-left: 10px;
   display: flex;
@@ -631,6 +637,10 @@ body {
   margin-right: auto;
 }
 
+.service__image.four {
+  height: 250px;
+}
+
 .announcement {
   font-size: 1.2rem;
 }
@@ -638,6 +648,10 @@ body {
 .announcement.two {
   font-size: 1.3rem;
   letter-spacing: 1px;
+}
+
+.announcement.four {
+  color: #f28b24;
 }
 
 .controller__container {
@@ -665,16 +679,20 @@ body {
   gap: 8px;
 }
 
-.arrow__lift,
-.arrow__right {
-  padding: 10px 11px;
+.arrow__lift {
+  padding: 11px 11px;
   border: 1px solid #8749f2;
   border-radius: 6px;
 }
 
-.arrows.two > .arrow__lift,
 .arrow__right {
-  padding: 12px 12px;
+  padding: 11px 11px;
+  border: 1px solid #8749f2;
+  border-radius: 6px;
+}
+
+.arrows.two>.arrow__lift,
+.arrow__right {
   border-color: #0c6cf2;
 }
 
@@ -684,6 +702,11 @@ body {
   border: 1px solid #7729ff;
 }
 
+.arrows.four>.arrow__lift,
+.arrow__right {
+  border-color: #f28b24;
+}
+
 .thread {
   height: 5px;
   width: 20px;
@@ -691,11 +714,11 @@ body {
   border-radius: 5px;
 }
 
-.belt__container.two > .thread {
+.belt__container.two>.thread {
   background-color: #c7def0;
 }
 
-.belt__container.two > .thread.one {
+.belt__container.two>.thread.one {
   background-color: #0c6cf2;
 }
 
@@ -759,6 +782,27 @@ body {
   background-color: #0033ff;
 }
 
+
+.title-icon.four {
+  width: 145px;
+}
+
+
+.exlore {
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  background-color: #EC8A23;
+  width: fit-content;
+  padding: 11px 15px;
+  border-radius: 10px;
+}
+
+.exlore:hover {
+  background-color: #D96724;
+}
+
+
 @media screen and (min-width: 1022px) {
   .header-burger {
     display: none;
@@ -781,6 +825,7 @@ body {
     height: 125vh;
     background-color: transparent;
   }
+
   .top__link {
     font-size: 16px;
     padding: 0.74rem 1rem;
