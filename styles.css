@@ -182,7 +182,6 @@ body {
   height: 66vh;
   position: absolute;
   z-index: -1;
-  z-index: -1;
 }
 
 .logo__container {
@@ -602,6 +601,7 @@ body {
   background-repeat: no-repeat;
   background-size: 70% 50%;
   background-position: 100% 30%;
+  width: 95%;
 }
 
 .title-icon {
@@ -1122,12 +1122,25 @@ body {
     font-size: 16px;
   }
 
+  .service.one,
+  .service.two,
+  .announcement.three,
+  .announcement.four {
+    width: 98vw;
+  }
+
   .service.one {
     background-image: url("./images/homepage-app-shapes-bg.png");
     background-position: 100% 80%;
     background-size: 50% 50%;
     width: 93%;
     height: auto;
+  }
+
+  .service.two {
+    background-position: 100% 100%;
+    background-size: 50% 50%;
+    width: 93%;
   }
 
   .banner__link {
@@ -1213,5 +1226,56 @@ body {
 
   ::-webkit-input-placeholder {
     top: 18px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .space {
+    width: 100vw;
+    height: 70vh;
+    background-color: transparent;
+  }
+
+  .service,
+  .service.one,
+  .service.two,
+  .service.three,
+  .service.four {
+    width: 300px;
+    margin-left: -10px;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    background-position: 50% 50%;
+    background-size: 50% 50%;
+  }
+  .controller {
+    display: none;
+  }
+
+  .footer__container {
+    padding: 20px 10px;
+  }
+  .resources {
+    flex-flow: column nowrap;
+    gap: 2rem;
+  }
+  .copyrights {
+    flex-flow: column nowrap;
+  }
+
+  .copyrights__row {
+    flex-wrap: wrap;
+  }
+
+  .service__image {
+    display: none;
+  }
+
+  .services__container {
+    align-items: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
