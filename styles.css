@@ -211,6 +211,7 @@ body {
 .header-mid__items span:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.08);
+  transition: background-color 0.3s ease 0s;
   color: #fff;
   border-radius: 0.2rem;
 }
@@ -230,6 +231,7 @@ body {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.08);
   color: #fff;
+  transition: background-color 0.3s ease 0s;
 }
 
 .header-right__items {
@@ -276,6 +278,7 @@ body {
 .header-search__logo:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.25);
+  transition: background-color 0.3s ease 0s;
 }
 
 .header-burger {
@@ -287,10 +290,6 @@ body {
 
 .header-burger:hover {
   cursor: pointer;
-}
-
-.header-mid__items span:hover + .triangle + .rectangle {
-  display: block;
 }
 
 .mid__container {
@@ -359,6 +358,7 @@ body {
 .signUp__btn:hover {
   color: rgba(12, 108, 242, 0.9);
   background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease 0s;
   cursor: pointer;
 }
 
@@ -766,6 +766,7 @@ body {
 
 .get__started:hover {
   background-color: #5d00ff;
+  transition: background-color 0.3s ease 0s;
 }
 
 .Be_client {
@@ -780,6 +781,7 @@ body {
 
 .Be_client:hover {
   background-color: #565f74;
+  transition: background-color 0.3s ease 0s;
 }
 
 .feature__container {
@@ -802,6 +804,7 @@ body {
 
 .Trade.Now:hover {
   background-color: #0033ff;
+  transition: background-color 0.3s ease 0s;
 }
 
 .title-icon.four {
@@ -820,6 +823,7 @@ body {
 
 .explore:hover {
   background-color: #d96724;
+  transition: background-color 0.3s ease 0s;
 }
 
 .explore-top {
@@ -861,6 +865,7 @@ body {
 
 .banner__link:hover {
   background-color: #ffffffea;
+  transition: background-color 0.3s ease 0s;
 }
 
 .footer__container {
@@ -947,6 +952,7 @@ body {
 .products__lists li:hover {
   cursor: pointer;
   color: #0033ff;
+  transition: color 0.3s ease 0s;
 }
 
 .footer__references {
@@ -1106,7 +1112,9 @@ body {
   }
 
   .feature__container {
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
   }
 
   .feature__container h3 {
@@ -1210,12 +1218,15 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-  .service {
+  .service.one,
+  .service.two,
+  .service.three,
+  .service.four {
     padding: 90px 110px;
-  }
 
-  .service.one {
-    width: 85%;
+    background-position: 100% 100%;
+    background-size: 45% 60%;
+    width: 93%;
   }
 
   .get__started {
